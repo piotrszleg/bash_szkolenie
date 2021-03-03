@@ -48,10 +48,9 @@ W unixowych środowiskach (Linux, MacOS i WSL) mamy też do dyspozycji komendę 
 
 - podłączenie wyjścia jednego programu do wejścia drugiego `|`
 - czytanie z/do pliku `>`/`<`
-- `2>` redirect stderror
-- `command > file 2>&1` redirect stdout i stderror to `file`
-- /dev/stdin 
-- /dev/stdout
+- `2>` kierujemy stderror do pliku
+- `command > file 2>&1` kierujemy stdout i stderror do pliku `file`
+- wirtualne pliki: /dev/stdin, /dev/stdout i /dev/stderr, /dev/null
 
 # Ścieżki
 - `pwd` komenda na wypisanie obecnego folderu

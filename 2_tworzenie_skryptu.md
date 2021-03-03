@@ -34,7 +34,7 @@ Możemy go także podlinkować tak aby był używalny jako komenda:
 sudo ln -s ./skrypt.sh /usr/bin/skrypt
 ```
 
-I wtedy wystarczy nam wpisać `skrypt` z dowlnego folderu.
+I wtedy wystarczy nam wpisać `skrypt` z dowolnego folderu.
 
 # Argumenty
 
@@ -51,7 +51,8 @@ echo "Hello $1"
 ```
 
 Jeżeli chcemy się bawić w takie keyword arguments to znalazłem taki przykład w internecie
-(https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)[https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script]
+
+[https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script](https://www.baeldung.com/linux/use-command-line-arguments-in-bash-script)
 
 ```bash
 while getopts u:a:f: flag
@@ -70,7 +71,7 @@ echo "Full Name: $fullname";
 I możemy go użyć tak:
 
 ```bash
-sh userReg-flags.sh -f 'John Smith' -a 25 -u john
+./flags.sh -f 'John Smith' -a 25 -u john
 ```
 
 Nie będę wszystkiego w nim tłumaczył, to taki bardziej snippet do przekopiowania.
