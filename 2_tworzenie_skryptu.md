@@ -14,11 +14,11 @@ Przyjęło się że `/bin/sh` to interpreter jak najbardziej kompatybilny ze sta
 
 Interpreter `/bin/bash` zawiera rozszerzenia GNU. 
 
-To jaki interpreter wybierzemy raczej nie będzie wpływać na listę dostępnych komend, jedynie na skłądnię, więc może się okazać że użytkownik zwyczajnie nie będzie miał używanego przez nas programu.
+Wybór interpretera ma przede wszystkim wpływ składnię, dobrze skonfigurowane interpretery powinny mieć podlinkowane komendy z `/bin/` i `/usr/bin/` ale można też dodawać swoje własne ścieżki czy modyfikować ich zachowanie w plikach konfiguracyjnych. Ogólnie jest straszny chaos i dlatego najlepiej jest używać `/bin/sh` z domyślną konfiguracją, komend z ww folderów i pilnować się aby nasz skrypt był jak najbliższy standardowi Unixa.
 
 Po zapisaniu na naszym skrypcie musimy wykonać komendę:
 ```bash
-xargs chmod +x skrypt.sh
+chmod +x skrypt.sh
 ```
 (Rozszerzenie pliku nie ma znaczenia na linuxie.)
 
@@ -28,13 +28,15 @@ Dzięki niemu możemy wykonać ten plik o tak:
 ./skrypt.sh
 ```
 
-Możemy go także podlinkować tak aby był używalny jako komenda:
+Możemy go także podlinkować tak aby był używalny jako komenda w każdym folderze:
 
 ```bash
 sudo ln -s ./skrypt.sh /usr/bin/skrypt
+
+skrypt
 ```
 
-I wtedy wystarczy nam wpisać `skrypt` z dowolnego folderu.
+Oczywiście uprzedzam że będą problemy z używaniem zmiennej `$0`.
 
 # Argumenty
 
